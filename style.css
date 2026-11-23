@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap');
 
-/* =========================================
-   [EDIT PRIBADI: WARNA TEMA LIGHT & DARK MODE]
-   ========================================= */
+/* [EDIT PRIBADI: WARNA TEMA LIGHT & DARK MODE] */
 :root {
   --bg-page: #f4f6f9;
   --bg-surface: #ffffff;
@@ -46,7 +44,7 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--bg-page);
+  background: var(--bg-page);
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
@@ -58,14 +56,12 @@ a {
   color: inherit;
 }
 
-/* =========================================
-   NAVBAR
-   ========================================= */
+/* NAVBAR */
 .top-nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--bg-surface);
+  background: var(--bg-surface);
   border-bottom: 2px solid var(--border-strong);
 }
 
@@ -137,9 +133,7 @@ a {
   flex-shrink: 0;
 }
 
-/* =========================================
-   MAIN CONTAINER & HERO BANNER
-   ========================================= */
+/* MAIN & HERO */
 .main-container {
   max-width: 1080px;
   margin: 0 auto;
@@ -176,20 +170,11 @@ a {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(
-    90deg,
-    rgba(241, 245, 249, 0.92) 0%,
-    rgba(226, 232, 240, 0.82) 55%,
-    rgba(203, 213, 225, 0.70) 100%
-  );
+  background: linear-gradient(90deg, rgba(241, 245, 249, 0.92) 0%, rgba(226, 232, 240, 0.82) 55%, rgba(203, 213, 225, 0.70) 100%);
 }
 
 [data-theme="dark"] .hero-overlay {
-  background: linear-gradient(
-    90deg,
-    rgba(15, 23, 42, 0.90) 0%,
-    rgba(15, 23, 42, 0.78) 100%
-  );
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.90) 0%, rgba(15, 23, 42, 0.78) 100%);
 }
 
 .hero-content {
@@ -216,7 +201,7 @@ a {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: var(--blue-primary);
+  background: var(--blue-primary);
 }
 
 .hero-title {
@@ -271,7 +256,7 @@ a {
   font-weight: 500;
 }
 
-.hero-Right-meta {
+.hero-right-meta {
   text-align: right;
 }
 
@@ -290,9 +275,7 @@ a {
   line-height: 1.15;
 }
 
-/* =========================================
-   SECTION DIVIDERS (01 ABOUT / 02 TECH BLOG)
-   ========================================= */
+/* SECTION BAR */
 .section-bar {
   display: flex;
   align-items: center;
@@ -344,9 +327,7 @@ a {
   flex-shrink: 0;
 }
 
-/* =========================================
-   NEO-BRUTALIST CARD BASE & ABOUT
-   ========================================= */
+/* CARD BASE & ABOUT */
 .brutal-card {
   background: var(--bg-surface);
   border: 2px solid var(--border-strong);
@@ -369,11 +350,11 @@ a {
 
 .navy-profile-card {
   background: var(--navy-grad);
-  color: #ffffff;
+  color: #fff;
   border-radius: 14px;
   border: 2px solid var(--border-strong);
   box-shadow: var(--shadow-hard);
-  min-height: 360px;
+  min-height: 410px;
   padding: 24px;
   position: relative;
   display: flex;
@@ -388,19 +369,15 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  /* [EDIT PRIBADI: Ubah 22% ke angka lebih besar jika foto masih kurang naik] */
+  object-position: center 22%;
   z-index: 1;
 }
 
 .navy-card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(11, 19, 43, 0.95) 0%,
-    rgba(11, 19, 43, 0.45) 55%,
-    rgba(11, 19, 43, 0.15) 100%
-  );
+  background: linear-gradient(to top, rgba(11, 19, 43, 0.92) 0%, rgba(11, 19, 43, 0.35) 38%, rgba(11, 19, 43, 0.05) 70%);
   z-index: 2;
 }
 
@@ -546,16 +523,27 @@ a {
   gap: 12px;
 }
 
-.badge-outline-blue {
+.badge-outline-blue,
+.badge-light-blue {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
   font-weight: 700;
   color: var(--blue-primary);
   background: var(--blue-soft);
   border: 1px solid var(--blue-border);
-  padding: 3px 8px;
   border-radius: 6px;
+}
+
+.badge-outline-blue {
+  font-size: 0.65rem;
+  padding: 3px 8px;
   white-space: nowrap;
+}
+
+.badge-light-blue {
+  align-self: flex-start;
+  font-size: 0.63rem;
+  padding: 3px 9px;
+  margin-bottom: 10px;
 }
 
 .edu-info h4 {
@@ -582,19 +570,6 @@ a {
 
 .exp-card-wide {
   grid-column: 1 / -1;
-}
-
-.badge-light-blue {
-  align-self: flex-start;
-  font-family: var(--font-mono);
-  font-size: 0.63rem;
-  font-weight: 700;
-  color: var(--blue-primary);
-  background: var(--blue-soft);
-  border: 1px solid var(--blue-border);
-  padding: 3px 9px;
-  border-radius: 6px;
-  margin-bottom: 10px;
 }
 
 .exp-card h4 {
@@ -630,9 +605,7 @@ a {
   color: var(--text-muted);
 }
 
-/* =========================================
-   TECH BLOG SECTION & IMAGES
-   ========================================= */
+/* TECH BLOG */
 .blog-header-center {
   text-align: center;
   margin-bottom: 36px;
@@ -658,8 +631,7 @@ a {
   font-size: 0.7rem;
   color: var(--text-light);
   letter-spacing: 1.2px;
-  margin-top: 4px;
-  margin-bottom: 20px;
+  margin: 4px 0 20px;
 }
 
 .category-pills {
@@ -713,7 +685,7 @@ a {
   overflow: hidden;
   border: 1.8px solid var(--border-strong);
   margin-bottom: 16px;
-  background-color: var(--bg-page);
+  background: var(--bg-page);
 }
 
 .blog-card-img img {
@@ -726,6 +698,15 @@ a {
 
 .blog-card-item:hover .blog-card-img img {
   transform: scale(1.04);
+}
+
+.logo-frame {
+  background-color: #ffffff;
+}
+
+.img-logo-fit {
+  object-fit: contain !important;
+  padding: 18px;
 }
 
 .blog-card-top {
@@ -787,9 +768,7 @@ a {
   color: var(--blue-primary);
 }
 
-/* =========================================
-   MODAL POP-UP ARTIKEL
-   ========================================= */
+/* MODAL POP-UP */
 .modal-backdrop {
   position: fixed;
   inset: 0;
@@ -834,7 +813,7 @@ a {
 
 .modal-close-btn:hover {
   background: var(--blue-primary);
-  color: #ffffff;
+  color: #fff;
 }
 
 .modal-article-title {
@@ -851,7 +830,7 @@ a {
   overflow: hidden;
   border: 2px solid var(--border-strong);
   margin-bottom: 22px;
-  background-color: var(--bg-page);
+  background: var(--bg-page);
 }
 
 .modal-hero-img {
@@ -885,9 +864,7 @@ a {
   font-size: 0.82rem;
 }
 
-/* =========================================
-   FOOTER
-   ========================================= */
+/* FOOTER */
 .bottom-footer {
   border-top: 2px solid var(--border-strong);
   background: var(--bg-surface);
@@ -920,16 +897,17 @@ a {
   color: var(--blue-primary);
 }
 
-/* =========================================
-   RESPONSIVE TABLET & MOBILE
-   ========================================= */
+/* RESPONSIVE */
 @media (max-width: 860px) {
   .about-grid,
   .exp-grid,
   .blog-cards-grid {
     grid-template-columns: 1fr;
   }
-  .hero-Right-meta {
+  .navy-profile-card {
+    min-height: 440px;
+  }
+  .hero-right-meta {
     text-align: left;
   }
   .nav-links {
